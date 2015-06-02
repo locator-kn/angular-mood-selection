@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module('locator.moodselection', []).directive('moodSelection', function () {
+angular.module('locator.moodselection', []).directive('moodselection', function () {
 
     var template = [
         '<div class="mood-selection-container">',
@@ -57,9 +57,6 @@ angular.module('locator.moodselection', []).directive('moodSelection', function 
                     moodQuery.push(entry.query_name);
                 });
                 return moodQuery.join('.');
-            }
-            $scope.showSelectableMoods = function (val) {
-                $scope.showSelectableMoods = val;
             }
         },
 
