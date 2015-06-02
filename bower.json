@@ -1,0 +1,24 @@
+{
+  "name": "angular-mood-selection",
+  "version": "0.0.0",
+  "homepage": "https://github.com/locator-kn/angular-mood-selection",
+  "authors": [
+    "Nicolai Loeffler <nicolai.loeffler92@gmail.com>"
+  ],
+  "description": "AngularJS directive for mood selection",
+  "main": "js/directive.js",
+  "keywords": [
+    "angular",
+    "directive",
+    "mood",
+    "selection"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
