@@ -5,7 +5,7 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
     var template = [
         '<div class="mood-selection-container">',
         '<div class="selected-mood" ng-repeat="selectedMood in selectedMoods">',
-        '<img class="icon" ng-src="data:image/gif;base64,{{selectedMood.icon}}">',
+        '<img class="icon" ng-src="/images/icons/{{selectedMood.icon}}">',
         '<div>',
         '{{selectedMood.title}}',
         '</div>',
