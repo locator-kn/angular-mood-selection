@@ -48,7 +48,6 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
             $scope.removeSelectedMood = function(mood) {
                 $scope.selectedMoods.splice($scope.selectedMoods.indexOf(mood), 1);
                 $scope.query.moods = ($scope.getMoodQuery($scope.selectedMoods));
-                console.info($scope.selectableMoods);
             }
 
             $scope.getMoodQuery = function(moods) {
