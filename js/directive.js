@@ -11,7 +11,7 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
         '</div>',
         '<div class="remove-mood" ng-click="removeSelectedMood(selectedMood)">x</div>',
         '</div>',
-        '<img src="../images/plus.png" ng-click="showSelectableMoods=true" ng-hide="selectableMoods.length == selectedMoods.length">',
+        '<img src="lib/components/angular-mood-selection/images/plus.png" ng-click="showSelectableMoods=true" ng-hide="selectableMoods.length == selectedMoods.length">',
         '<div ng-show="showSelectableMoods==true">',
         '<div ng-repeat="mood in selectableMoods" ng-if="!moodIsSelected(mood)">',
         '<div ng-click="selectMood(mood)">',
