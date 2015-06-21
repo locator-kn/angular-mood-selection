@@ -4,19 +4,18 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
 
     var template = [
         '<div class="mood-selection-container">',
-        '<div class="selected-mood" ng-repeat="selectedMood in selectedMoods">',
+        '<div class="selected-mood pointer" ng-repeat="selectedMood in selectedMoods">',
         '<img class="icon" ng-src="/images/icons/{{selectedMood.icon}}">',
         '<div>',
         '{{selectedMood.title}}',
         '</div>',
-        '<div class="remove-mood" ng-click="removeSelectedMood(selectedMood)">x</div>',
+        '<div class="remove-mood pointer" ng-click="removeSelectedMood(selectedMood)">x</div>',
         '</div>',
-        '<img src="lib/components/angular-mood-selection/images/plus.png" ng-click="showSelectableMoods=true" ng-hide="selectableMoods.length == selectedMoods.length">',
+        '<img class="pointer" src="lib/components/angular-mood-selection/images/plus.png" ng-click="showSelectableMoods=true" ng-hide="selectableMoods.length == selectedMoods.length">',
         '<div ng-show="showSelectableMoods==true">',
         '<div ng-repeat="mood in selectableMoods" ng-if="!moodIsSelected(mood)">',
-        '<div ng-click="selectMood(mood)">',
+        '<div class="pointer" ng-click="selectMood(mood)">',
         '{{mood.title}}',
-        '</div>',
         '</div>',
         '</div>',
         '</div>'

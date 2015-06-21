@@ -18,3 +18,7 @@
 .remove-mood {
     float: right;
 }
+
+.pointer {
+    cursor: pointer;
+}
