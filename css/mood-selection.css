@@ -2,23 +2,40 @@
     padding: 0 15px;
 }
 
-.mood-selection-container .selected-mood {
+.mood-selection-container {
     padding-bottom: 5px;
-}
-
-.selected-mood div{
-    display: inline-block;
 }
 
 .mood-selection-container .icon {
     height: 25px;
-    margin-right: 5px;
 }
 
-.remove-mood {
+.selected-mood {
+    display: inline-block;
+}
+
+.available-mood div{
+    display: inline-block;
+}
+
+.available-mood img {
     float: right;
+}
+
+.available-mood {
+    padding-bottom: 5px;
 }
 
 .pointer {
     cursor: pointer;
+}
+
+.add-icon {
+    float: right;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.available-moods-container {
+    padding-top: 60px;
 }
