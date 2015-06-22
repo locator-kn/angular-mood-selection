@@ -68,4 +68,27 @@
 .selected-moods-add-icon-container {
     display: block;
     height: 30px;
+    width: 100%;
+}
+
+.ms-selected-moods .ms-mood-images {
+    margin-left: 4px;
+    margin-top: 5px;
+    float: left;
+}
+.ms-mood-images {
+    height: 25px;
+    width: 25px;
+}
+.ms-mood-image {
+    height: 25px;
+    width: 25px;
+}
+.ms-cross-image {
+    width: 12px;
+    float: left;
+    position: relative;
+    right: 8px;
+    top: 2px;
+    cursor: pointer;
 }
