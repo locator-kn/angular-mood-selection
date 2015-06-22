@@ -49,9 +49,7 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
             angular.element(document).ready(function() {
                 if($('.available-moods-container').outerHeight() > 300) {
                     $scope.showUp = false;
-                    $scope.showDown = false;
-                    alert('yoo');
-                }
+                    $scope.showDown = false;                }
             });
 
             $scope.selectMood = function (mood) {
