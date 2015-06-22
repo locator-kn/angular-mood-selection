@@ -39,7 +39,7 @@
 }
 
 .available-moods-container {
-    height: calc(100vh - 500px);
+    height: calc(100vh - 525px);
     width: 100%;
     overflow: scroll;
     padding-left: 8px;
@@ -63,6 +63,10 @@
 .arrow-wrapper {
     width: 100%;
     display: block;
+    min-height: 20px;
+    height: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .ms-selected-moods-add-icon-container {
