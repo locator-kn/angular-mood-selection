@@ -4,12 +4,13 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
 
     var template = [
         '<div class="mood-selection-container">',
+        '<div class="mood-selection-container">',
         '<div class="selected-moods-add-icon-container">',
         '<div class="selected-moods" ng-repeat="mood in selectedMoods">',
         '<div class="mood-images tt tt-small" aria-label="{{mood.title}}">',
         '<img class="mood-image" ng-src="images/icons/{{mood.icon}}">',
         '</div>',
-        '<img class="cross-image" src="images/icons/cross_button_moods.png" ng-click="removeSelectedMood(mood)">',
+        '<img class="cross-image" src="lib/components/angular-mood-selection/images/cross_blue.png" ng-click="removeSelectedMood(mood)">',
         '</div>',
         '<img class="add-icon pointer" src="lib/components/angular-mood-selection/images/plus.png" ng-click="showSelectableMoods=true" ng-hide="3 == selectedMoods.length">',
         '</div>',
