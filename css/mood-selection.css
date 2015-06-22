@@ -5,6 +5,7 @@
 
 .mood-selection-container {
     padding-bottom: 5px;
+    display: block;
 }
 
 .mood-selection-container .icon {
@@ -38,17 +39,33 @@
 }
 
 .available-moods-container {
-    height: 20vh;
+    height: calc(100vh - 500px);
     width: 100%;
     overflow: scroll;
     padding-left: 8px;
 }
 
 .available-moods-wrapper {
-    padding-top: 40px;
-    padding-bottom: 20px;
 }
 
 .available-moods-container::-webkit-scrollbar {
     display: none;
+}
+
+.arrow {
+    margin-left: auto;
+    margin-right: auto;
+    width: 35px;
+    height: 20px;
+    display: block;
+}
+
+.arrow-wrapper {
+    width: 100%;
+    display: block;
+}
+
+.selected-moods-add-icon-container {
+    display: block;
+    height: 30px;
 }

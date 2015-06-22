@@ -4,7 +4,6 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
 
     var template = [
         '<div class="mood-selection-container">',
-        '<div class="mood-selection-container">',
         '<div class="selected-moods-add-icon-container">',
         '<div class="selected-moods" ng-repeat="mood in selectedMoods">',
         '<div class="mood-images tt tt-small" aria-label="{{mood.title}}">',
@@ -13,6 +12,9 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
         '<img class="cross-image" src="lib/components/angular-mood-selection/images/cross_blue.png" ng-click="removeSelectedMood(mood)">',
         '</div>',
         '<img class="add-icon pointer" src="lib/components/angular-mood-selection/images/plus.png" ng-click="showSelectableMoods=true" ng-hide="3 == selectedMoods.length">',
+        '</div>',
+        '<div class="arrow-wrapper">',
+        '<img class="arrow" src="lib/components/angular-mood-selection/images/small_arrow_black_up.png" ng-click="scrollUp()">',
         '</div>',
         '<div class="available-moods-wrapper">',
         '<div class="available-moods-container">',
@@ -24,6 +26,9 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
         '<img class="icon" ng-src="images/icons/{{mood.icon}}">',
         '</div>',
         '</div>',
+        '</div>',
+        '<div class="arrow-wrapper">',
+        '<img class="arrow" src="lib/components/angular-mood-selection/images/small_arrow_black_down.png" ng-click="scrollDown()">',
         '</div>',
         '</div>'
     ];
