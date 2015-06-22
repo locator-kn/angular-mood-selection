@@ -13,6 +13,7 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
         '</div>',
         '<img class="add-icon pointer" src="lib/components/angular-mood-selection/images/plus.png" ng-click="showSelectableMoods=true" ng-hide="3 == selectedMoods.length">',
         '</div>',
+        '<div class="available-moods-wrapper">',
         '<div class="available-moods-container">',
         '<div ng-show="showSelectableMoods==true">',
         '<div class="available-mood" ng-repeat="mood in selectableMoods" ng-if="!moodIsSelected(mood)">',
@@ -20,6 +21,7 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
         '{{mood.title}}',
         '</div>',
         '<img class="icon" ng-src="images/icons/{{mood.icon}}">',
+        '</div>',
         '</div>',
         '</div>',
         '</div>'
