@@ -13,7 +13,7 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
         '</div>',
         '<img class="add-icon pointer" src="lib/components/angular-mood-selection/images/plus.png" ng-click="showSelectableMoods=true" ng-hide="3 == selectedMoods.length">',
         '</div>',
-        '<div class="arrow-wrapper">',
+        '<div class="arrow-wrapper" ng-show="showSelectableMoods==true && showUp == true">',
         '<img class="arrow" src="lib/components/angular-mood-selection/images/small_arrow_black_up.png" ng-click="scrollUp()">',
         '</div>',
         '<div class="available-moods-wrapper">',
@@ -27,7 +27,7 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
         '</div>',
         '</div>',
         '</div>',
-        '<div class="arrow-wrapper">',
+        '<div class="arrow-wrapper" ng-show="showSelectableMoods==true && showDown == true">',
         '<img class="arrow" src="lib/components/angular-mood-selection/images/small_arrow_black_down.png" ng-click="scrollDown()">',
         '</div>',
         '</div>'
@@ -42,6 +42,9 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
 
         controller: function ($scope, lodash) {
             $scope.showSelectableMoods = false;
+            $scope.scroll = 0;
+            $scope.showUp = false;
+            $scope.showDown = true;
 
             $scope.selectMood = function (mood) {
                 $scope.selectedMoods.push(mood);
@@ -67,6 +70,28 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
                     moodQuery.push(entry.query_name);
                 });
                 return moodQuery.join('.');
+            }
+
+            $scope.scrollDown = function() {
+                $scope.showUp = true;
+                $scope.scroll = $scope.scroll + 50;
+                $('.available-moods-container').animate({
+                    scrollTop: $scope.scroll
+                }, 500);
+                if ($('.available-moods-container')[0].scrollHeight - $('.available-moods-container').scrollTop() == $('.available-moods-container').outerHeight()) {
+                    $scope.showDown = false;
+                }
+            }
+
+            $scope.scrollUp = function() {
+                $scope.showDown = true;
+                $scope.scroll = $scope.scroll - 50;
+                $('.available-moods-container').animate({
+                    scrollTop: $scope.scroll
+                }, 500);
+                if ( $('.available-moods-container').scrollTop() == 0) {
+                    $scope.showUp = false;
+                }
             }
         },
 
