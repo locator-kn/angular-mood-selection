@@ -11,7 +11,7 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
         '</div>',
         '<img class="ms-cross-image" src="lib/components/angular-mood-selection/images/cross_blue.png" ng-click="removeSelectedMood(mood)">',
         '</div>',
-        '<img class="add-icon pointer" src="lib/components/angular-mood-selection/images/plus.png" ng-click="showSelectableMoods()" ng-hide="3 == selectedMoods.length">',
+        '<img class="add-icon pointer" src="lib/components/angular-mood-selection/images/plus.png" ng-click="toggleShowSelectableMoods()" ng-hide="3 == selectedMoods.length">',
         '</div>',
         '<div class="arrow-wrapper">',
         '<img class="arrow" ng-show="showSelectableMoods==true && showUp == true" src="lib/components/angular-mood-selection/images/small_arrow_black_up.png" ng-click="scrollUp()">',
@@ -68,11 +68,13 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
             $scope.removeSelectedMood = function(mood) {
                 $scope.selectedMoods.splice($scope.selectedMoods.indexOf(mood), 1);
                 $scope.query.moods = ($scope.getMoodQuery($scope.selectedMoods));
+                console.info($scope.selectableMoods);
             }
 
-            $scope.showSelectableMoods = function() {
+            $scope.toggleShowSelectableMoods = function() {
                 $scope.showSelectableMoods = true;
             }
+
             $scope.getMoodQuery = function(moods) {
                 var moodQuery = [];
                 moods.forEach(function (entry) {
