@@ -14,7 +14,7 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
         '<img class="add-icon pointer" src="lib/components/angular-mood-selection/images/plus.png" ng-click="toggleShowSelectableMoods()" ng-hide="3 == selectedMoods.length">',
         '</div>',
         '<div class="arrow-wrapper">',
-        '<img class="arrow" ng-show="showSelectableMoods==true && showUp == true" src="lib/components/angular-mood-selection/images/small_arrow_black_up.png" ng-click="scrollUp()">',
+        '<img class="arrow pointer" ng-show="showSelectableMoods==true && showUp == true" src="lib/components/angular-mood-selection/images/small_arrow_black_up.png" ng-click="scrollUp()">',
         '</div>',
         '<div class="available-moods-wrapper">',
         '<div class="available-moods-container">',
@@ -28,7 +28,7 @@ angular.module('locator.moodselection', []).directive('moodselection', function 
         '</div>',
         '</div>',
         '<div class="arrow-wrapper">',
-        '<img class="arrow" ng-show="showSelectableMoods==true && showDown == true" src="lib/components/angular-mood-selection/images/small_arrow_black_down.png" ng-click="scrollDown()">',
+        '<img class="arrow pointer" ng-show="showSelectableMoods==true && showDown == true" src="lib/components/angular-mood-selection/images/small_arrow_black_down.png" ng-click="scrollDown()">',
         '</div>',
         '</div>'
     ];
